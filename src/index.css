@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-dark text-white font-sans;
+  }
+}
+
+@layer components {
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-yellow {
+    @apply bg-sparin-yellow/10 backdrop-blur-md border border-sparin-yellow/30;
+  }
+
+  .glass-cyan {
+    @apply bg-sparin-cyan/10 backdrop-blur-md border border-sparin-cyan/30;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-yellow {
+    background: linear-gradient(135deg, #FFE066 0%, #FFD33D 100%);
+  }
+
+  .gradient-cyan {
+    background: linear-gradient(135deg, #6FEDD6 0%, #5DD4BD 100%);
+  }
+
+  .gradient-yellow-cyan {
+    background: linear-gradient(135deg, #FFD33D 0%, #6FEDD6 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #F3BA60 0%, #F5C678 100%);
+  }
+
+  /* Text gradients */
+  .text-gradient-yellow-cyan {
+    background: linear-gradient(135deg, #FFD33D 0%, #6FEDD6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply px-8 py-4 rounded-full font-semibold text-neutral-dark transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+    background: linear-gradient(135deg, #F3BA60 0%, #F5C678 100%);
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 rounded-full font-semibold border-2 border-sparin-cyan text-sparin-cyan transition-all duration-300 hover:bg-sparin-cyan hover:text-neutral-dark;
+  }
+
+  /* Feature card */
+  .feature-card {
+    @apply relative p-6 rounded-2xl transition-all duration-300 hover:scale-105;
+    background: linear-gradient(135deg, rgba(111, 237, 214, 0.1) 0%, rgba(111, 237, 214, 0.05) 100%);
+    border: 1px solid rgba(111, 237, 214, 0.2);
+  }
+
+  .feature-card:hover {
+    border-color: rgba(111, 237, 214, 0.5);
+    box-shadow: 0 20px 40px rgba(111, 237, 214, 0.15);
+  }
+
+  /* Sport card */
+  .sport-card {
+    @apply p-4 rounded-xl transition-all duration-300 cursor-pointer;
+    background: linear-gradient(135deg, rgba(255, 211, 61, 0.1) 0%, rgba(255, 211, 61, 0.05) 100%);
+    border: 1px solid rgba(255, 211, 61, 0.2);
+  }
+
+  .sport-card:hover {
+    @apply scale-110;
+    border-color: rgba(255, 211, 61, 0.6);
+    box-shadow: 0 10px 30px rgba(255, 211, 61, 0.2);
+  }
+
+  /* Rank badge */
+  .rank-badge {
+    @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-bold;
+  }
+
+  /* Section styling */
+  .section-padding {
+    @apply py-20 md:py-32 px-4 md:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-neutral-gray max-w-2xl;
+  }
+}
+
+@layer utilities {
+
+  /* Glow effects */
+  .glow-yellow {
+    box-shadow: 0 0 40px rgba(255, 211, 61, 0.4);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 40px rgba(111, 237, 214, 0.4);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(243, 186, 96, 0.4);
+  }
+
+  /* Custom scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

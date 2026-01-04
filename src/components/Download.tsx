@@ -129,15 +129,35 @@ const Download = () => {
                     </div>
 
                     {/* Play Store Coming Soon */}
-                    <div className="flex justify-center mb-12">
-                        <div className="flex items-center gap-3 px-6 py-3 bg-neutral-dark/20 rounded-full border border-neutral-dark/30">
-                            <FaGooglePlay className="text-xl text-neutral-dark" />
-                            <div className="text-left">
-                                <div className="text-xs text-neutral-dark/70">COMING SOON</div>
-                                <div className="text-sm font-semibold text-neutral-dark">Google Play Store</div>
+                    <motion.div
+                        className="flex justify-center mb-12"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                        <div className="relative group">
+                            {/* Animated border glow */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-sparin-cyan via-neutral-dark to-sparin-cyan rounded-2xl blur-sm opacity-50 group-hover:opacity-75 transition-opacity animate-pulse" />
+
+                            <div className="relative flex items-center gap-4 px-8 py-4 bg-neutral-dark rounded-2xl border border-white/10 shadow-xl">
+                                {/* Play Store Icon with gradient background */}
+                                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-sparin-cyan/20 to-sparin-yellow/20 rounded-xl">
+                                    <FaGooglePlay className="text-2xl text-white" />
+                                </div>
+
+                                <div className="text-left">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-xs font-bold text-sparin-cyan tracking-wider">COMING SOON</span>
+                                        <span className="px-2 py-0.5 bg-gradient-to-r from-sparin-yellow/20 to-sparin-cyan/20 text-white text-xs font-bold rounded-full border border-white/20 animate-pulse">
+                                            🚀 ~2 months
+                                        </span>
+                                    </div>
+                                    <div className="text-lg font-bold text-white">Google Play Store</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Stats */}
                     <motion.div

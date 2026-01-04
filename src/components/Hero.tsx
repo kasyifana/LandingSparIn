@@ -106,11 +106,20 @@ const Hero = () => {
                         </motion.a>
 
                         {/* Play Store - Coming Soon */}
-                        <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-neutral-charcoal/80 border border-sparin-cyan/30">
-                            <FaGooglePlay className="text-lg text-sparin-cyan" />
-                            <span className="text-white/80">Play Store</span>
-                            <span className="px-2 py-0.5 bg-sparin-cyan/20 text-sparin-cyan text-xs font-bold rounded">SOON</span>
-                        </div>
+                        <motion.div 
+                            className="relative flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-neutral-charcoal/90 to-neutral-charcoal/70 border border-sparin-cyan/40 backdrop-blur-sm shadow-lg shadow-sparin-cyan/10"
+                            whileHover={{ scale: 1.02 }}
+                        >
+                            {/* Glow effect */}
+                            <div className="absolute inset-0 rounded-full bg-sparin-cyan/5 animate-pulse" />
+                            <FaGooglePlay className="text-lg text-sparin-cyan relative z-10" />
+                            <span className="text-white/90 font-medium relative z-10">Play Store</span>
+                            <div className="flex items-center gap-1 relative z-10">
+                                <span className="px-2 py-0.5 bg-gradient-to-r from-sparin-cyan/30 to-sparin-yellow/30 text-white text-xs font-bold rounded-full border border-white/20">
+                                    🚀 ~2 months
+                                </span>
+                            </div>
+                        </motion.div>
                     </div>
                 </motion.div>
 
